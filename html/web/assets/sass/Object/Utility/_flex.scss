@@ -1,0 +1,17 @@
+%flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-left {
+    @include left;
+}
+
+.flex-wrap {
+    @extend %flex-wrap;
+}
+
+.flex-wrap-space {
+    @extend %flex-wrap;
+    justify-content: space-between;
+}

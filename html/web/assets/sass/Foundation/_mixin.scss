@@ -1,0 +1,153 @@
+//media query
+@mixin media_query_mobile {
+    @media (max-width: $var-mobile) {
+        @content;
+    }
+}
+
+@mixin media_query_phablet {
+    @media (min-width: $var-mobile) and (max-width: $var-phablet) {
+        @content;
+    }
+}
+
+@mixin media_query_tablet {
+    @media (min-width: $var-tablet) and (max-width: $var-pc) {
+        @content;
+    }
+}
+
+@mixin media_query_pc {
+    @media (min-width: $var-pc) {
+        @content;
+    }
+}
+
+@mixin media_query_less_tablet {
+    @media (max-width: $var-tablet) {
+        @content;
+    }
+}
+
+@mixin media_query_min_tablet {
+    @media (min-width: $var-tablet) {
+        @content;
+    }
+}
+
+@mixin media_query_max_tablet {
+    @media (min-width: $var-phablet) {
+        @content;
+    }
+}
+
+@mixin media_query_max_phablet {
+    @media (max-width: $var-phablet) {
+        @content;
+    }
+}
+
+@mixin media_query_less_md-mobile {
+    @media (max-width: $var-md-mobile) {
+        @content;
+    }
+}
+
+//イベント、企業一覧ボックス
+@mixin boxset($box-width: auto, $box-height: auto) {
+    border: 1px $color-gray-morelight solid;
+    width: $box-width;
+    height: $box-height;
+}
+
+@mixin boxset__image($name, $size:cover) {
+    background-image: url(#{$image-dir}/#{$name});
+    @if ($size) {
+        background-size: $size;
+    }
+}
+
+//グラデーション
+@mixin bg-gradient {
+    background: -moz-linear-gradient(left, $right-color 0%, $left-color 100%); // FF3.6-15
+    background: -webkit-linear-gradient(left, $right-color 0%, $left-color 100%); // Chrome10-25,Safari5.1-6
+    background: linear-gradient(to right, $color-blue-light 0%, $color-blue-light 100%); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+}
+
+//flexboxの親要素 子要素に　margin-right: auto;　を入れると右と左に要素が配置できる
+@mixin flex {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+
+@mixin flex--2 {
+    -webkit-align-items: center;
+    align-items: flex-start;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//左寄せ
+@mixin left {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+//右寄せ
+@mixin right {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+
+//ホバーアニメーション
+@mixin hover-animation($transition: 0.2s, $opacity: 0.7) {
+    transition: $transition;
+    opacity: $opacity;
+}
+
+//デフォルトボタン
+@mixin button-radius {
+    -webkit-border-radius: $button-radius;
+    -moz-border-radius: $button-radius;
+    -ms-border-radius: $button-radius;
+    border-radius: $button-radius;
+}
+
+//横スクロール　このmixin子要素にdisplay:inline-blockを入れると横スクロール可能
+@mixin x-scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+//clearfix
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+
+@mixin transition3s {
+    transition: transform .3s, -webkit-transform .3s;
+}

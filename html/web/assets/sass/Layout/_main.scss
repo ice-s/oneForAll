@@ -1,0 +1,10 @@
+@import '../Foundation/mixin';
+
+.center-content {
+    @include transition3s;
+    width: 100%;
+    @include media_query_pc {
+        margin-left: 250px;
+        width: calc(100% - 250px);
+    }
+}

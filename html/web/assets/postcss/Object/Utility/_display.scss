@@ -1,0 +1,25 @@
+.u-d-block {
+    display: block !important;
+}
+
+.u-d-inline-block {
+    display: inline-block !important;
+}
+
+.u-d-inline {
+    display: inline !important;
+}
+
+.u-d-none {
+    display: none !important;
+}
+
+.u-d-none-not-i {
+    display: none;
+}
+
+@include media_query_less_tablet {
+    .u-d-none-sp {
+        display: none;
+    }
+}

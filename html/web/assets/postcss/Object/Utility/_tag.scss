@@ -1,0 +1,13 @@
+.u-white-tag {
+    display: inline;
+    border: 1px $color-text solid;
+    padding: 3px;
+    font-size: $font-size-12;
+}
+
+.u-white-tag--2 {
+    display: inline;
+    border: 1px $color-white solid;
+    padding: 3px;
+    color: $color-white;
+}

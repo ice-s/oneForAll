@@ -1,0 +1,37 @@
+.u-font-size-12 {
+    font-size: $font-size-12 !important;
+}
+
+.u-font-size-14 {
+    font-size: $font-size-14;
+}
+
+.u-font-size-16 {
+    font-size: $font-size-16;
+}
+
+.u-font-size-18 {
+    font-size: $font-size-18;
+}
+
+.u-font-size-20 {
+    font-size: $font-size-20 !important;
+}
+
+.u-font-size-40 {
+    font-size: 40px !important;
+}
+
+.u-font-size-50 {
+    font-size: 50px !important;
+}
+
+.u-font-size-2em {
+    font-size: 1.4rem;
+}
+
+@include media_query_less_tablet {
+    .u-sp-11 {
+        font-size: $font-size-11;
+    }
+}

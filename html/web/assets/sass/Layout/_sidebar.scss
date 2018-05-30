@@ -1,0 +1,20 @@
+.main-menu {
+    position: fixed;
+    z-index: 1;
+    -webkit-transform: translateX(-250px);
+    transform: translateX(-250px);
+    width: 250px;
+    top: 0;
+    bottom: 0;
+    background-color: #1abc9c;
+    opacity: .95;
+    color: #fff;
+    margin: 0;
+
+    @include transition3s;
+
+    @include media_query_pc {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}

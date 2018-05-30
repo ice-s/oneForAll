@@ -1,0 +1,32 @@
+{
+  "name": "digmee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp watch",
+    "build": "gulp build",
+    "production": "gulp build --production"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^8.1.0",
+    "css-mqpacker": "^6.0.2",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-combine-media-queries": "^0.2.0",
+    "gulp-if": "^2.0.2",
+    "gulp-notify": "^3.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^3.2.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-stylelint": "^7.0.0",
+    "postcss-reporter": "^5.0.0",
+    "postcss-scss": "^1.0.4",
+    "stylelint": "^9.1.3",
+    "stylelint-order": "^0.8.1",
+    "stylelint-scss": "^3.0.0"
+  }
+}
